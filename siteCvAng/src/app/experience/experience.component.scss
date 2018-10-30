@@ -1,0 +1,28 @@
+@import '../../variables';
+@import '../../mixins';
+
+.componentContent{
+    overflow: hidden;
+    color: $textColorBoard;
+    .mat-stepper-horizontal,.mat-stepper-vertical{
+        background-color: $boardColor;
+    }
+}
+.stepContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+section{
+    margin:auto;
+    @include breakpoint(screen, $labtopScreen){
+     width: 95%;
+    }
+    h3{
+        display: inline;
+    }
+    p{
+        display: inline;
+        font-size: 0.9em;
+    }
+}

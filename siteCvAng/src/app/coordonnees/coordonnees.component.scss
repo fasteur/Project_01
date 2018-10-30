@@ -1,0 +1,32 @@
+@import '../../mixins';
+@import '../../variables';
+
+.infoContainer{
+  margin:4em auto;
+  
+  h3,p{
+    display: inline;
+    
+  }
+  ul{
+    padding:0;
+    list-style: none;
+  }
+  @include breakpoint(screen, $tabletScreen){
+    width: 80%;
+    // min-width: 400px;
+
+    @include breakpoint(screen,1024px){
+      padding-left: 0;
+      
+      @include breakpoint(screen,$labtopScreen){
+        width: 60%;
+        .content {
+          width: 400px;
+        }
+      }
+    }
+  }
+
+
+ }

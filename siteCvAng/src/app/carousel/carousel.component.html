@@ -1,0 +1,20 @@
+<div class="carouselContainer">
+
+  <div class="leftArrow">
+<img (click)="lessnbSwitch()" src="../../assets/public/images/chevron-left.svg" alt="left Arrow" width="15" height="30">
+  </div>
+  <div class="mainCarousel">
+    <ul *ngFor="let module of modules ; index as i">
+      <h2 *ngIf="i == nbSwitch">
+         <span >{{ module.title }} </span>
+      </h2>
+      <span *ngIf="i == nbSwitch" >
+        <li *ngFor="let cont of module.content" > {{ cont}} </li>
+  
+      </span>
+    </ul>
+  </div>
+  <div class="rightArrow">
+    <img (click)="addnbSwitch()" src="../../assets/public/images/chevron-right.svg" alt="right Arrow" width="15" height="30">
+  </div>
+</div>

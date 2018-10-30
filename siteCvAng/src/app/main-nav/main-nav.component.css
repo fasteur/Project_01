@@ -1,0 +1,10 @@
+
+@import '../../_variables.scss';
+
+.sidenav {
+  width: 240px;
+}
+
+.mat-icon{
+  color:#6fd6ff;
+}

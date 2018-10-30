@@ -1,0 +1,21 @@
+@import '../../mixins';
+@import '../../variables';
+.abouTitleContent{
+    width: 80%;
+    margin:auto;
+   h2{
+    padding: 0;
+    text-align: center;
+   } 
+}
+.aboutMainContent{
+    margin: 3em auto;
+    p{
+    line-height: 1.4;
+    }
+    @include breakpoint (screen, $tabletScreen){
+        width: 70%;
+        margin: 3em auto;
+    }
+}
+

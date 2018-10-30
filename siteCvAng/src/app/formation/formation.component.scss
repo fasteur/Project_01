@@ -1,0 +1,27 @@
+@import '../../variables';
+@import '../../mixins';
+
+.title{
+    margin:auto;
+    width: 170px;
+}
+.formationContainer{
+    margin:auto;
+/*     @include breakpoint (screen, $tabletScreen){
+        width: 70%;
+    } */
+    .tabContainer{
+            margin: 0 auto;
+        @include breakpoint (screen, $tabletScreen){
+            margin: 0 auto;
+            width: 80%;
+        }
+        .details{
+             ul{
+                color:$textColorBoard;
+                list-style: none;            
+            }
+        }
+    }  
+      
+}

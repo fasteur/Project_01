@@ -1,0 +1,33 @@
+@import '../../variables';
+@import '../../mixins';
+.skillsContainer{
+   
+    @include breakpoint (screen, $tabletScreen){
+        width: 70%; 
+        margin: 2em auto;
+    }
+    .mat-tab-body-content{
+          min-height:380px ;
+          overflow: hidden;
+    }
+    .mat-tab-label, .mat-tab-link {
+        font-size: 2em;
+        min-height: 100px;
+      
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+        h3,p{
+            display: inline;
+            @include breakpoint(screen,$mobileScreen -1){
+                margin: 0.5em;
+            }      
+        }
+        @include breakpoint (screen, $labtopScreen) {
+        padding-left: 2em;
+
+        }
+    }
+   
+} 

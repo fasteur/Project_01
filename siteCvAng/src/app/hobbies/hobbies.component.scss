@@ -1,0 +1,28 @@
+@import '../../mixins';
+@import '../../variables';
+
+.hobbyContainer{
+  margin:4em auto;
+  ul{
+    padding:0;
+    color: aliceblue;
+    list-style: none;
+  }
+  @include breakpoint(screen, $tabletScreen){
+    width: 80%;
+    padding-left:6em;
+    ul {
+      color: aliceblue;
+      list-style: circle;
+    }
+    @include breakpoint(screen,1024px){
+      padding-left: 0;
+      @include breakpoint(screen,$labtopScreen){
+        width: 60%;
+        padding-left:6em;
+      }
+    }
+  }
+
+
+ }

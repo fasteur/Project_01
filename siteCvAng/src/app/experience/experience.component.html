@@ -1,0 +1,43 @@
+<div class="componentContent">
+  <section>
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <ng-template  matStepperIcon="edit">
+<mat-icon class="mat-step-icon-content mat-icon material-icons ng-star-inserted" role="img" aria-hidden="true">arrow_forward_ios</mat-icon>
+      </ng-template>
+
+      <mat-step >
+        <ng-template class="dateTitle" matStepLabel>
+          <h2>2018 - 2019</h2>
+        </ng-template>
+        <h3>Développeur JavaScript </h3> <p>- Collaboration Technocite/Cefora</p>
+        
+      </mat-step>
+      <mat-step >
+        <ng-template matStepLabel>
+          <h2>2015 - 2017</h2>
+        </ng-template>
+        <h3> Méthodologie acquise en Agronomie </h3> <p>- Haute école de la Province de Namur</p>
+      </mat-step>
+    
+      <mat-step >
+        <ng-template matStepLabel>
+          <h2>2012 - 2015</h2>
+        </ng-template>
+        <h3>Psychologie, relations humaines </h3><p>- Université catholique de Louvain</p>
+      </mat-step>
+      <mat-step >
+        <ng-template matStepLabel>
+          <h2>2011 - 2012</h2>
+        </ng-template>
+        <h3>Histoire de l'art </h3> <p>- Faculté universitaires Notre-Dame de la Paix</p>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>
+          <h2>2011</h2>
+        </ng-template>
+        <h3>CESS, études générales en Sciences sociales </h3> <p>- Athénée Royal de Dinant</p>      
+      </mat-step>
+    
+    </mat-vertical-stepper>
+  </section>
+</div>

@@ -1,0 +1,129 @@
+@import './variables';
+@mixin clearfix {
+    &:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+}
+
+
+@mixin breakpoint($media, $bp){
+    @media #{$media} and (min-width: $bp){
+        /* @media screen and (min-width: 960px) */
+            @content; 
+    }
+}
+@mixin fontsize($font,$varFont){
+    @media #{$font}{
+        font-size: $varFont;
+        font-weight: normal;
+    }
+}
+
+@mixin fontFamily{
+    h1,h2,h3,p,li,a,.mat-list-item,.mat-tab-label{
+      font-weight: normal;
+      font-family: $fontFamilyMain;
+      line-height: 1.4;
+    }
+    h1{
+      font-size: $h1FontSize;
+    }
+    h2{
+      font-size: $h2FontSize;
+    }
+    h3{
+      font-size: $h3FontSize;
+      color:$textColorBoard;
+    }
+    p{
+      font-size: $pFontSize;
+      color: rgb(148, 198, 255);
+    }
+    li {
+      color: #AFC0C6; //rgb(161, 161, 167);
+      font-size: $h3FontSize;
+    }
+    .mat-list-item{
+      font-size: $pFontSize;
+    }
+    .mat-tab-label{
+      font-size: $h2FontSize;
+    }
+    h1,h2,.mat-list-item,.mat-tab-label {
+      color: $textColorBoard;
+    }
+   
+
+
+}
+@mixin keyframes($name){
+  @-webkit-keyframes #{$name}{@content;}
+  @keyframes #{$name}{@content;}
+}
+@include keyframes(blindEffect){
+  0%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+  22%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #000000;
+  }
+  23%{
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000,0 0 40px #000000;
+  }
+  24%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+  82%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #000000;
+  }
+  83%{
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000,0 0 40px #000000;
+  }
+  84%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+  85%{
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000,0 0 40px #000000;
+  }
+  86%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+  87%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #000000;
+  }
+  88%{
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000,0 0 40px #000000;
+  }
+  89%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+  85%{
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 20px #000000, 0 0 30px #000000,0 0 40px #000000;
+  }
+  90%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+  100%{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+  }
+}
+/* @include keyframes(lueurEffect){
+  0%{
+    background-image: linear-gradient(to top, $interfaceColor 99%, white 100%);
+  }
+  25%{
+    background-image: linear-gradient(to left, $interfaceColor 99%, white 100%);
+  }
+  50%{
+    background-image: linear-gradient(to bottom, $interfaceColor 99%, white 100%);
+  }
+  75%{
+    background-image: linear-gradient(to right, $interfaceColor 99%, white 100%);
+  }
+  100%{
+    background-image: linear-gradient(to right, $interfaceColor 99%, white 100%);
+  }
+
+} */

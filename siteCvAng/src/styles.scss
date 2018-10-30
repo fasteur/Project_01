@@ -1,0 +1,234 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'mixins';
+@import 'variables';
+html{
+  background-color: $interfaceColor;
+}
+body{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  height: 100%; 
+  margin: 0;
+ 
+}
+*, *:after,*:before{
+  font-size: inherit;
+}
+
+.mat-card{
+  width: 90%;
+  margin: 3em auto;
+  background-color: $interfaceColor;
+  @include breakpoint(screen, 800px){
+    width: 70%;
+    margin: 3em auto 0 auto;
+    background-color: $interfaceColor;
+    &:first-child{
+      max-width: 1080px;
+    }
+    max-width: 1040px;
+  }
+}
+.matCardHeader{
+  display: none !important;
+  @include breakpoint(screen, 800px){
+    display: block !important;
+    .headContentBall {
+    height: 7.5em;
+    background-color: $interfaceColor;
+    box-shadow: $boxShadowColor;
+    border-radius: 1em;
+    .textName{
+      color:$textColorBoard;
+      width: 40%;
+      display:inline-block;
+      height: 100%;
+      .contentName{
+        margin: 2em;
+        @include breakpoint(screen, 1108px){
+          margin: 2.5em;
+        }
+        h1{
+          font-size:1.5em;
+          font-family: 'Syncopate', sans-serif;       
+          color: #fff;
+          font-weight: normal;
+          // text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
+          animation: blindEffect 5000ms infinite;
+          text-align: center;            
+
+          @include breakpoint(screen, 1460px){
+            font-size:2em;
+          }
+        }
+      }
+    }
+    .ballContent{
+      display: inline-block;
+      .headBall {
+      position: absolute;
+      background-image: -webkit-linear-gradient(top, $interfaceColor 0%, #1e2e3b 100%);
+      background-image: linear-gradient(to bottom, $interfaceColor 0%, #1e2e3b 100%);
+      // animation: lueurEffect 100ms infinite;
+      box-shadow: $boxShadowColor;
+      top: -0.5em;
+      margin: auto;
+      width: 200px;
+      height: 200px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 2em;
+        .headText {
+          margin-top: 2.5em;
+          color: $textColorBoard;
+          font-weight: normal;
+          font-size: 0.9em;
+          font-family: 'Aldrich',sans-serif;
+        }
+      }
+    }
+    
+  }
+  }
+  
+}
+.sidenav-container{
+  margin:0;
+  background-color: $interfaceColor;
+  box-shadow: $boxShadowColor;  
+  min-height: 520px;//30em; 
+  border-radius: 1em;
+  .sidenav{
+    position:absolute !important;
+    background-color: $interfaceColor;  
+    .navSide {
+      padding: 0;
+      margin: 0;
+      li{
+          list-style: none;
+          background: rgba(0,0,0,0);
+          width: 100%;
+          height: 100%;
+          a{
+              display: block;
+              height: 2.5em;
+              width: 12em;
+              background-color: $interfaceColor;
+              box-shadow:$boxShadowColor;
+              color:$textColor;
+              text-align: center;
+              padding-top:1em;
+              text-decoration: none;
+              font-family: $fontFamilyMain;
+              font-size:1.2em;
+             
+              @include breakpoint(screen,$mobileScreen -1){
+                width: 15em;
+              }
+          } 
+          &:nth-child(4){
+            a{
+              padding-top: 0.6em;
+              padding-bottom: 0.6em;
+              height: 2.5em;
+            }
+          }
+          .active{
+            color: aliceblue !important;
+            background-color:rgb(2, 29, 58) !important; 
+            box-shadow: 0em 0em 0.7em rgb(129, 194, 255) !important;
+          } 
+         
+      }
+    }
+  }
+  .mat-sidenav-content{
+    box-shadow: $boxShadowColor;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: $boardColor;
+    height: 530px;
+    
+    @include breakpoint (screen, $tabletScreen){
+      box-shadow: $boxShadowColor;
+      padding-left: 3em;
+      padding-right: 2em;
+      background-color: $boardColor;
+      height: 530px;
+    }
+    .componentContent{
+      margin-top: 1em;
+      margin-bottom:1em;
+      border:1px solid $textColor;
+      border-radius: 1em;
+      padding:1em;
+      min-height: 458px;
+     
+      .mat-button-wrapper{
+        color:aliceblue !important;
+      }      
+      .tabGroupFormation{
+        align-items: stretch ;
+      }
+    }
+    @include fontFamily
+  }
+}
+.mat-tab-header-pagination-disabled, .mat-tab-header-pagination-chevron{
+  border-color: aliceblue !important;
+}  
+.mat-step-header .mat-step-icon {
+  background-color: $interfaceColor !important;
+  box-shadow: $boxShadowColor;
+  font-family: $fontFamilyMain;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label{
+  color: $textColorBoard !important;
+}
+#textareaId{
+  color: $textColorBoard !important;
+  &::placeholder{
+    color: $textColorBoard !important;
+  }
+}
+.mat-raised-button{
+  color: $textColor !important;
+  // border: 1px solid $textColor !important;
+
+}
+.mat-fab, .mat-flat-button, .mat-mini-fab, .mat-raised-button{
+  background-color: $interfaceColor;
+  // color: #fff !important;
+}
+.skillsContainer[_ngcontent-c9] ul[_ngcontent-c9]{
+  overflow: hidden;
+  height: 200px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $textColor;//rgb(2, 25, 51); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $interfaceColor; 
+}
