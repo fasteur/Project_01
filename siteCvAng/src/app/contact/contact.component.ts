@@ -37,8 +37,8 @@ export class ContactComponent implements OnInit {
       'message': this.userForm.controls.message.value
     };
     console.log('ready to send');
-    // this.http.post(window.location.origin + '/sendmail', Data).subscribe((result) => console.log(result));
-    this.http.post("http://localhost:8012" + '/sendmail', Data).subscribe((result) => console.log(result));
+    this.http.post(window.location.origin + '/sendmail', Data).subscribe((result) => console.log(result));
+    // this.http.post("http://localhost:8012" + '/sendmail', Data).subscribe((result) => console.log(result));
   }
   hideTitle(){
     let form = document.querySelector('.formContainer');
