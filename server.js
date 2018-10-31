@@ -18,11 +18,11 @@ app.use(function(req,res,next){
 next();
 });
 
-app.use(express.static(__dirname + '/dist/MonSite'));
+app.use(express.static(__dirname + '/dist/cvSiteAng'));
 
 app.get('/*', function(req,res) {
 
-res.sendFile(path.join(__dirname+'/dist/MonSite/index.html'));
+res.sendFile(path.join(__dirname+'/dist/cvSiteAng/index.html'));
 });
 
 app.post("/sendmail",function (req, res){
