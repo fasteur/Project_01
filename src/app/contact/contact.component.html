@@ -33,10 +33,11 @@
   </div>
 
   <section >
-
+    <mat-form-field class="msgFormField" appearance="outline">
     <textarea name="textarea" id="textareaId" cols="30" rows="10" class="msgSpace" matInput placeholder="Message" 
     formControlName="message"></textarea>
-
+    <mat-error *ngIf="userForm.controls.message.invalid">{{getErrorMessage('message')}}</mat-error>
+    </mat-form-field>
     <!-- <mat-form-field class="msgFormField" appearance="outline">
     <input class="msgSpace" matInput placeholder="message" 
     formControlName="message">
@@ -44,7 +45,8 @@
     </mat-form-field> -->
   </section>
   
-  <button mat-raised-button  [disabled]="!userForm.valid">Send</button>
+  <button mat-raised-button  [disabled]="!userForm.valid" ><a (click)='buttonClicked()' [routerLink]="['/about']" 
+    routerLinkActive="active">Send</a></button>
 </form>
 </section>
 </div>

@@ -44,4 +44,7 @@ export class ContactComponent implements OnInit {
     let form = document.querySelector('.formContainer');
     console.log('form');
   }
+  buttonClicked(){
+    console.log('button has been clicked');
+  }
 }
