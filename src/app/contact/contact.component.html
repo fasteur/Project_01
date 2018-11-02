@@ -38,15 +38,10 @@
     formControlName="message"></textarea>
     <mat-error *ngIf="userForm.controls.message.invalid">{{getErrorMessage('message')}}</mat-error>
     </mat-form-field>
-    <!-- <mat-form-field class="msgFormField" appearance="outline">
-    <input class="msgSpace" matInput placeholder="message" 
-    formControlName="message">
-    <mat-error *ngIf="userForm.controls.message.invalid">{{getErrorMessage('message')}}</mat-error>
-    </mat-form-field> -->
   </section>
     
-<button mat-raised-button [routerLink]="['/about']" routerLinkActive="active" [disabled]="!userForm.valid" (click)='formSend()'><a
-    (click)='buttonClicked()'>Send</a></button>
+<button mat-raised-button [routerLink]="['/about']" routerLinkActive="active" [disabled]="!userForm.valid" (click)='SendMail()'><a
+    >Send</a></button>
       
     
 </form>

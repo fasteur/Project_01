@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
   }
 
   SendMail() {
-    console.log('Message envoyé');
+    alert('Votre message a bien été envoyé');
     const Data = {
       'name': this.userForm.controls.name.value,
       'email': this.userForm.controls.email.value,
@@ -48,11 +48,6 @@ export class ContactComponent implements OnInit {
     let form = document.querySelector('.formContainer');
     console.log('form');
   }
-  buttonClicked(){
-    
-    console.log(this.routerLinkActive);
-  }
-  formSend(){
-    alert('Votre message a bien été envoyé');
-  }
+  
+  
 }
