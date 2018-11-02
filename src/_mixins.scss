@@ -109,21 +109,14 @@
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f7ff, 0 0 30px #00f7ff,0 0 40px #00f7ff;
   }
 }
-/* @include keyframes(lueurEffect){
+@include keyframes(moveCircuit){
   0%{
-    background-image: linear-gradient(to top, $interfaceColor 99%, white 100%);
+    left: 0;
   }
-  25%{
-    background-image: linear-gradient(to left, $interfaceColor 99%, white 100%);
-  }
-  50%{
-    background-image: linear-gradient(to bottom, $interfaceColor 99%, white 100%);
-  }
-  75%{
-    background-image: linear-gradient(to right, $interfaceColor 99%, white 100%);
+  60%{
+    left:220px;
   }
   100%{
-    background-image: linear-gradient(to right, $interfaceColor 99%, white 100%);
+    left: 240px;
   }
-
-} */
+}

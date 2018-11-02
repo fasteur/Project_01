@@ -2,7 +2,7 @@
 <div class="componentFormContent">
 
   <section class="formContainer">
-    <h2> CONTACT ME</h2>
+    <h2> CONTACTEZ-MOI</h2>
   </section>
   <section class="sectionForm">
 <form [formGroup]="userForm" (submit)="SendMail(userForm.value)">
@@ -44,9 +44,11 @@
     <mat-error *ngIf="userForm.controls.message.invalid">{{getErrorMessage('message')}}</mat-error>
     </mat-form-field> -->
   </section>
-  
-  <button mat-raised-button  [disabled]="!userForm.valid" ><a (click)='buttonClicked()' [routerLink]="['/about']" 
-    routerLinkActive="active">Send</a></button>
+    
+<button mat-raised-button [routerLink]="['/about']" routerLinkActive="active" [disabled]="!userForm.valid" (click)='formSend()'><a
+    (click)='buttonClicked()'>Send</a></button>
+      
+    
 </form>
 </section>
 </div>

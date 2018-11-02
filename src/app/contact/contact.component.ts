@@ -9,8 +9,11 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/comm
 })
 export class ContactComponent implements OnInit {
   userForm: FormGroup;
-  constructor(private router: Router, private http: HttpClient) { }
+  disabled
+  routerLinkActive
 
+  constructor(private router: Router, private http: HttpClient) { }
+  
   ngOnInit() {
     this.userForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
@@ -39,12 +42,17 @@ export class ContactComponent implements OnInit {
     console.log('ready to send');
     this.http.post(window.location.origin + '/sendmail', Data).subscribe((result) => console.log(result));
     // this.http.post("http://localhost:8012" + '/sendmail', Data).subscribe((result) => console.log(result));
+
   }
   hideTitle(){
     let form = document.querySelector('.formContainer');
     console.log('form');
   }
   buttonClicked(){
-    console.log('button has been clicked');
+    
+    console.log(this.routerLinkActive);
+  }
+  formSend(){
+    alert('Votre message a bien été envoyé');
   }
 }
